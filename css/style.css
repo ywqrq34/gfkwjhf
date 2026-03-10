@@ -8,6 +8,9 @@ body{
 font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
 background:#ffffff;
 overflow-x:hidden;
+
+/* í•˜ë‹¨ ê³ ì •ë²„íŠ¼ ê³µê°„ í™•ë³´ */
+padding-bottom:80px;
 }
 
 .page-wrapper{
@@ -16,7 +19,7 @@ margin:auto;
 background:#fff;
 }
 
-/* Çì´õ */
+/* í—¤ë” */
 
 .site-header{
 position:sticky;
@@ -50,7 +53,7 @@ width:auto;
 transition:all 0.3s ease;
 }
 
-/* ¸ŞÀÎ ÀÌ¹ÌÁö */
+/* ë©”ì¸ ì´ë¯¸ì§€ */
 
 .body-wrap{
 position:relative;
@@ -63,7 +66,7 @@ height:auto;
 display:block;
 }
 
-/* ¹öÆ° ¿µ¿ª */
+/* ë²„íŠ¼ ì˜ì—­ */
 
 .overlay-btns{
 position:absolute;
@@ -74,14 +77,14 @@ gap:2%;
 width:80%;
 }
 
-/* ¹öÆ° */
+/* ë²„íŠ¼ */
 
 .overlay-btns a{
 flex:1;
 display:block;
 }
 
-/* ¹öÆ° ÀÌ¹ÌÁö ºñÀ² À¯Áö */
+/* ë²„íŠ¼ ì´ë¯¸ì§€ ë¹„ìœ¨ ìœ ì§€ */
 
 .overlay-btns img{
 width:100%;
@@ -90,7 +93,7 @@ display:block;
 transition:all 0.3s ease;
 }
 
-/* ¹öÆ° À§Ä¡ */
+/* ë²„íŠ¼ ìœ„ì¹˜ */
 
 .btns-hero{
 top:8.7%;
@@ -100,7 +103,7 @@ top:8.7%;
 top:98%;
 }
 
-/* ÇªÅÍ */
+/* í‘¸í„° */
 
 .site-footer{
 text-align:center;
@@ -110,18 +113,20 @@ color:#999;
 padding-bottom:80px;
 }
 
-/* ÇÏ´Ü °íÁ¤ ¹öÆ° */
+/* í•˜ë‹¨ ê³ ì • ë²„íŠ¼ */
 
 .bottom-bar{
 position:fixed;
-bottom:0px;
+bottom:0;
 left:50%;
 transform:translateX(-50%);
 width:100%;
 display:flex;
-gap:0px;
+gap:0;
 z-index:999;
 }
+
+/* ë²„íŠ¼ ìŠ¤íƒ€ì¼ */
 
 .bbar-btn{
 flex:1;
@@ -129,7 +134,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:16px;
-border-radius:0px;
+border-radius:0;
 font-weight:700;
 font-size:15px;
 text-decoration:none;
@@ -147,9 +152,7 @@ background:#FEE500;
 color:#3A1D1D;
 }
 
-/* ===================== */
-/* Hover È¿°ú */
-/* ===================== */
+/* Hover íš¨ê³¼ */
 
 .header-btns img:hover{
 transform:translateY(-4px);
@@ -166,9 +169,7 @@ transform:translateY(-3px);
 box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* ===================== */
-/* SEO ¼û±è ÅØ½ºÆ® */
-/* ===================== */
+/* SEO ìˆ¨ê¹€ í…ìŠ¤íŠ¸ */
 
 .seo-hidden{
 position:absolute;
@@ -177,4 +178,28 @@ top:auto;
 width:1px;
 height:1px;
 overflow:hidden;
+}
+
+/* ============================= */
+/* ëª¨ë°”ì¼ ìµœì í™” */
+/* ============================= */
+
+@media (max-width:768px){
+
+.header-inner{
+padding:10px 12px;
+}
+
+.header-logo img{
+height:34px;
+}
+
+.header-btns{
+gap:6px;
+}
+
+.header-btns img{
+height:34px;
+}
+
 }
