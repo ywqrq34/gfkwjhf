@@ -6,7 +6,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
-background:#ffffff;
+background:#fff;
 overflow-x:hidden;
 padding-bottom:80px;
 }
@@ -14,10 +14,9 @@ padding-bottom:80px;
 .page-wrapper{
 max-width:1200px;
 margin:auto;
-background:#fff;
 }
 
-/* 헤더 */
+/* header */
 
 .site-header{
 position:sticky;
@@ -34,13 +33,14 @@ align-items:center;
 padding:10px 20px;
 max-width:1200px;
 margin:auto;
+position:relative;
 }
 
 .header-logo img{
 height:44px;
 }
 
-/* PC 버튼 */
+/* header buttons */
 
 .header-btns{
 display:flex;
@@ -49,11 +49,9 @@ gap:10px;
 
 .header-btns img{
 height:42px;
-width:auto;
-transition:all 0.3s ease;
 }
 
-/* 햄버거 메뉴 기본 숨김 */
+/* 햄버거 */
 
 .menu-toggle{
 display:none;
@@ -61,20 +59,18 @@ font-size:28px;
 cursor:pointer;
 }
 
-/* 메인 이미지 */
+/* main image */
 
 .body-wrap{
 position:relative;
-width:100%;
 }
 
 .body-img{
 width:100%;
-height:auto;
 display:block;
 }
 
-/* 버튼 영역 */
+/* overlay buttons */
 
 .overlay-btns{
 position:absolute;
@@ -85,16 +81,8 @@ gap:2%;
 width:80%;
 }
 
-.overlay-btns a{
-flex:1;
-display:block;
-}
-
 .overlay-btns img{
 width:100%;
-height:auto;
-display:block;
-transition:all 0.3s ease;
 }
 
 .btns-hero{
@@ -105,17 +93,16 @@ top:8.7%;
 top:98%;
 }
 
-/* 푸터 */
+/* footer */
 
 .site-footer{
 text-align:center;
 padding:70px;
 font-size:12px;
 color:#999;
-padding-bottom:80px;
 }
 
-/* 하단 고정 버튼 */
+/* bottom bar */
 
 .bottom-bar{
 position:fixed;
@@ -136,8 +123,6 @@ padding:16px;
 font-weight:700;
 font-size:15px;
 text-decoration:none;
-box-shadow:0 6px 20px rgba(0,0,0,0.25);
-transition:all 0.25s ease;
 }
 
 .bbar-btn-tel{
@@ -153,46 +138,31 @@ color:#3A1D1D;
 /* hover */
 
 .header-btns img:hover{
-transform:translateY(-4px);
-}
-
-.overlay-btns img:hover{
-transform:translateY(-4px);
-}
-
-.bbar-btn:hover{
 transform:translateY(-3px);
 }
 
-/* SEO 숨김 */
+.overlay-btns img:hover{
+transform:translateY(-3px);
+}
+
+/* seo hidden */
 
 .seo-hidden{
 position:absolute;
 left:-9999px;
-width:1px;
-height:1px;
-overflow:hidden;
 }
 
-/* ===================== */
-/* 모바일 메뉴 */
-/* ===================== */
+/* mobile */
 
 @media (max-width:768px){
-
-/* 기존 버튼 숨김 */
 
 .header-btns{
 display:none;
 }
 
-/* 햄버거 표시 */
-
 .menu-toggle{
 display:block;
 }
-
-/* 메뉴 펼침 */
 
 .header-btns.active{
 display:flex;
