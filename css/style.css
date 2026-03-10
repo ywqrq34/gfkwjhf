@@ -8,8 +8,6 @@ body{
 font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
 background:#ffffff;
 overflow-x:hidden;
-
-/* 하단 고정버튼 공간 확보 */
 padding-bottom:80px;
 }
 
@@ -42,6 +40,8 @@ margin:auto;
 height:44px;
 }
 
+/* PC 버튼 */
+
 .header-btns{
 display:flex;
 gap:10px;
@@ -51,6 +51,14 @@ gap:10px;
 height:42px;
 width:auto;
 transition:all 0.3s ease;
+}
+
+/* 햄버거 메뉴 기본 숨김 */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
 /* 메인 이미지 */
@@ -77,14 +85,10 @@ gap:2%;
 width:80%;
 }
 
-/* 버튼 */
-
 .overlay-btns a{
 flex:1;
 display:block;
 }
-
-/* 버튼 이미지 비율 유지 */
 
 .overlay-btns img{
 width:100%;
@@ -92,8 +96,6 @@ height:auto;
 display:block;
 transition:all 0.3s ease;
 }
-
-/* 버튼 위치 */
 
 .btns-hero{
 top:8.7%;
@@ -122,11 +124,8 @@ left:50%;
 transform:translateX(-50%);
 width:100%;
 display:flex;
-gap:0;
 z-index:999;
 }
-
-/* 버튼 스타일 */
 
 .bbar-btn{
 flex:1;
@@ -134,7 +133,6 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:16px;
-border-radius:0;
 font-weight:700;
 font-size:15px;
 text-decoration:none;
@@ -152,54 +150,66 @@ background:#FEE500;
 color:#3A1D1D;
 }
 
-/* Hover 효과 */
+/* hover */
 
 .header-btns img:hover{
 transform:translateY(-4px);
-filter:brightness(1.05);
 }
 
 .overlay-btns img:hover{
 transform:translateY(-4px);
-filter:brightness(1.05);
 }
 
 .bbar-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* SEO 숨김 텍스트 */
+/* SEO 숨김 */
 
 .seo-hidden{
 position:absolute;
 left:-9999px;
-top:auto;
 width:1px;
 height:1px;
 overflow:hidden;
 }
 
-/* ============================= */
-/* 모바일 최적화 */
-/* ============================= */
+/* ===================== */
+/* 모바일 메뉴 */
+/* ===================== */
 
 @media (max-width:768px){
 
-.header-inner{
-padding:10px 12px;
-}
-
-.header-logo img{
-height:34px;
-}
+/* 기존 버튼 숨김 */
 
 .header-btns{
-gap:6px;
+display:none;
 }
 
-.header-btns img{
-height:34px;
+/* 햄버거 표시 */
+
+.menu-toggle{
+display:block;
+}
+
+/* 메뉴 펼침 */
+
+.header-btns.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#fff;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.header-btns.active a{
+display:flex;
+justify-content:center;
+padding:10px 0;
 }
 
 }
