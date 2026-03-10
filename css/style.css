@@ -1,0 +1,180 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+background:#ffffff;
+overflow-x:hidden;
+}
+
+.page-wrapper{
+max-width:1200px;
+margin:auto;
+background:#fff;
+}
+
+/* 헤더 */
+
+.site-header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #eee;
+z-index:100;
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.header-logo img{
+height:44px;
+}
+
+.header-btns{
+display:flex;
+gap:10px;
+}
+
+.header-btns img{
+height:42px;
+width:auto;
+transition:all 0.3s ease;
+}
+
+/* 메인 이미지 */
+
+.body-wrap{
+position:relative;
+width:100%;
+}
+
+.body-img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* 버튼 영역 */
+
+.overlay-btns{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:2%;
+width:80%;
+}
+
+/* 버튼 */
+
+.overlay-btns a{
+flex:1;
+display:block;
+}
+
+/* 버튼 이미지 비율 유지 */
+
+.overlay-btns img{
+width:100%;
+height:auto;
+display:block;
+transition:all 0.3s ease;
+}
+
+/* 버튼 위치 */
+
+.btns-hero{
+top:8.7%;
+}
+
+.btns-cta{
+top:98%;
+}
+
+/* 푸터 */
+
+.site-footer{
+text-align:center;
+padding:70px;
+font-size:12px;
+color:#999;
+padding-bottom:80px;
+}
+
+/* 하단 고정 버튼 */
+
+.bottom-bar{
+position:fixed;
+bottom:0px;
+left:50%;
+transform:translateX(-50%);
+width:100%;
+display:flex;
+gap:0px;
+z-index:999;
+}
+
+.bbar-btn{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:16px;
+border-radius:0px;
+font-weight:700;
+font-size:15px;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+transition:all 0.25s ease;
+}
+
+.bbar-btn-tel{
+background:#3db8f5;
+color:#fff;
+}
+
+.bbar-btn-kakao{
+background:#FEE500;
+color:#3A1D1D;
+}
+
+/* ===================== */
+/* Hover 효과 */
+/* ===================== */
+
+.header-btns img:hover{
+transform:translateY(-4px);
+filter:brightness(1.05);
+}
+
+.overlay-btns img:hover{
+transform:translateY(-4px);
+filter:brightness(1.05);
+}
+
+.bbar-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* ===================== */
+/* SEO 숨김 텍스트 */
+/* ===================== */
+
+.seo-hidden{
+position:absolute;
+left:-9999px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
