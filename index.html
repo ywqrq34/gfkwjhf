@@ -24,29 +24,21 @@
 
   <div class="header-inner">
 
-    <!-- 로고 -->
     <a class="header-logo" href="https://wood-meta.com">
       <img src="images/logo.png" alt="우드티켓 로고">
     </a>
 
-    <!-- 햄버거 버튼 (모바일 전용, PC에서는 CSS로 숨김) -->
+    <!-- 햄버거 버튼 (모바일 전용) -->
     <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
 
-    <!-- 전화 / 카카오 버튼
-         PC  : 항상 표시 (flex)
-         모바일 : 기본 숨김 → 햄버거 클릭 시 .active 추가 → 드롭다운 표시 -->
+    <!-- PC: 항상 표시 / 모바일: 햄버거 클릭 시 드롭다운 -->
     <div class="header-btns" id="mobileMenu">
-
       <a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_tel.png" alt="전화 상담하기">
       </a>
-
-      <a href="https://open.kakao.com/o/sxFxoIki"
-         target="_blank"
-         rel="nofollow noopener noreferrer">
+      <a href="https://open.kakao.com/o/sxFxoIki" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_kakao.png" alt="카카오톡 상담하기">
       </a>
-
     </div>
 
   </div>
@@ -57,17 +49,14 @@
 
   <main class="body-wrap">
 
-    <img src="images/body.png" class="body-img"
-         alt="우드티켓 소액결제 현금화 안내">
+    <img src="images/body.png" class="body-img" alt="우드티켓 소액결제 현금화 안내">
 
     <!-- 상단 오버레이 버튼 -->
     <div class="overlay-btns btns-hero">
       <a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_tel.png" alt="전화 상담하기">
       </a>
-      <a href="https://open.kakao.com/o/sxFxoIki"
-         target="_blank"
-         rel="nofollow noopener noreferrer">
+      <a href="https://open.kakao.com/o/sxFxoIki" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_kakao.png" alt="카카오톡 상담하기">
       </a>
     </div>
@@ -77,9 +66,7 @@
       <a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_tel.png" alt="전화 상담하기">
       </a>
-      <a href="https://open.kakao.com/o/sxFxoIki"
-         target="_blank"
-         rel="nofollow noopener noreferrer">
+      <a href="https://open.kakao.com/o/sxFxoIki" target="_blank" rel="nofollow noopener noreferrer">
         <img src="images/btn_kakao.png" alt="카카오톡 상담하기">
       </a>
     </div>
@@ -92,23 +79,20 @@
 
 </div>
 
-<!-- 하단 고정 바 (모바일에서만 CSS로 표시) -->
+<!-- 하단 고정 바 - PC/모바일 모두 표시 - 텍스트 버튼 -->
 <div class="bottom-bar">
-
   <a href="tel:01029692842"
      target="_blank"
      rel="nofollow noopener noreferrer"
      class="bbar-btn bbar-btn-tel">
     전화 상담하기
   </a>
-
   <a href="https://open.kakao.com/o/sxFxoIki"
      target="_blank"
      rel="nofollow noopener noreferrer"
      class="bbar-btn bbar-btn-kakao">
     카카오톡 상담하기
   </a>
-
 </div>
 
 <script>
@@ -117,7 +101,6 @@ function toggleMenu(){
   menu.classList.toggle("active");
 }
 
-// 메뉴 외부 클릭 시 닫기
 document.addEventListener("click", function(e){
   var toggle = document.getElementById("menuToggle");
   var menu   = document.getElementById("mobileMenu");
