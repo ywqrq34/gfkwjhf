@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 
 <meta charset="UTF-8">
@@ -11,7 +10,6 @@
 <meta name="description" content="우드티켓은 소액결제, 신용카드, 정보이용료 현금화를 빠르고 안전하게 진행합니다.">
 
 <link rel="icon" href="images/favicon.png" type="image/png">
-
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -30,17 +28,21 @@
 <img src="images/logo.png" alt="우드티켓 로고">
 </a>
 
-<!-- 햄버거 메뉴 -->
+<!-- 모바일 햄버거 -->
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 <div class="header-btns" id="mobileMenu">
 
-<a href="tel:01029692842">
+<a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
 <img src="images/btn_tel.png" alt="전화 상담하기">
 </a>
 
-<a href="https://open.kakao.com/o/sxFxoIki" target="_blank">
+<a href="https://open.kakao.com/o/sxFxoIki"
+target="_blank"
+rel="nofollow noopener noreferrer">
+
 <img src="images/btn_kakao.png" alt="카카오톡 상담하기">
+
 </a>
 
 </div>
@@ -49,23 +51,24 @@
 
 </header>
 
-
 <div class="page-wrapper">
 
 <main class="body-wrap">
 
 <img src="images/body.png" class="body-img"
-alt="우드티켓 소액결제 신용카드 정보이용료 현금화 안내">
+alt="우드티켓 소액결제 현금화 안내">
 
 <!-- 상단 버튼 -->
 
 <div class="overlay-btns btns-hero">
 
-<a href="tel:01029692842">
+<a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
 <img src="images/btn_tel.png">
 </a>
 
-<a href="https://open.kakao.com/o/sxFxoIki" target="_blank">
+<a href="https://open.kakao.com/o/sxFxoIki"
+target="_blank"
+rel="nofollow noopener noreferrer">
 <img src="images/btn_kakao.png">
 </a>
 
@@ -75,11 +78,13 @@ alt="우드티켓 소액결제 신용카드 정보이용료 현금화 안내">
 
 <div class="overlay-btns btns-cta">
 
-<a href="tel:01029692842">
+<a href="tel:01029692842" target="_blank" rel="nofollow noopener noreferrer">
 <img src="images/btn_tel.png">
 </a>
 
-<a href="https://open.kakao.com/o/sxFxoIki" target="_blank">
+<a href="https://open.kakao.com/o/sxFxoIki"
+target="_blank"
+rel="nofollow noopener noreferrer">
 <img src="images/btn_kakao.png">
 </a>
 
@@ -87,32 +92,29 @@ alt="우드티켓 소액결제 신용카드 정보이용료 현금화 안내">
 
 </main>
 
-
 <footer class="site-footer">
-
-<p>© 2024 우드티켓 All rights reserved.</p>
-
+© 2024 우드티켓 All rights reserved.
 </footer>
 
 </div>
 
-
-<!-- 하단 상담 버튼 -->
-
 <div class="bottom-bar">
 
-<a href="tel:01029692842" class="bbar-btn bbar-btn-tel">
+<a href="tel:01029692842"
+target="_blank"
+rel="nofollow noopener noreferrer"
+class="bbar-btn bbar-btn-tel">
 전화 상담하기
 </a>
 
 <a href="https://open.kakao.com/o/sxFxoIki"
 target="_blank"
+rel="nofollow noopener noreferrer"
 class="bbar-btn bbar-btn-kakao">
 카카오톡 상담하기
 </a>
 
 </div>
-
 
 <script>
 
@@ -120,11 +122,7 @@ function toggleMenu(){
 
 var menu = document.getElementById("mobileMenu");
 
-if(menu.classList.contains("active")){
-menu.classList.remove("active");
-}else{
-menu.classList.add("active");
-}
+menu.classList.toggle("active");
 
 }
 
