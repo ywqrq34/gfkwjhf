@@ -16,9 +16,7 @@ margin:auto;
 background:#fff;
 }
 
-/* ===================== */
-/* header */
-/* ===================== */
+/* ===== 헤더 ===== */
 
 .site-header{
 position:sticky;
@@ -29,6 +27,7 @@ z-index:100;
 }
 
 .header-inner{
+position:relative;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -41,9 +40,22 @@ margin:auto;
 height:44px;
 }
 
+/* 햄버거 버튼 - PC에서는 완전히 숨김 */
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+padding:4px 10px;
+color:#333;
+user-select:none;
+}
+
+/* PC 기본: 버튼 항상 표시 */
 .header-btns{
 display:flex;
+flex-direction:row;
 gap:10px;
+align-items:center;
 }
 
 .header-btns img{
@@ -52,9 +64,7 @@ width:auto;
 transition:all 0.3s ease;
 }
 
-/* ===================== */
-/* main image */
-/* ===================== */
+/* ===== 본문 이미지 ===== */
 
 .body-wrap{
 position:relative;
@@ -67,9 +77,7 @@ height:auto;
 display:block;
 }
 
-/* ===================== */
-/* overlay buttons */
-/* ===================== */
+/* ===== 오버레이 버튼 ===== */
 
 .overlay-btns{
 position:absolute;
@@ -100,28 +108,24 @@ top:8.7%;
 top:98%;
 }
 
-/* ===================== */
-/* footer */
-/* ===================== */
+/* ===== 푸터 ===== */
 
 .site-footer{
 text-align:center;
 padding:70px;
-padding-bottom:calc(120px + env(safe-area-inset-bottom));
+padding-bottom:80px;
 font-size:12px;
 color:#999;
 }
 
-/* ===================== */
-/* bottom fixed buttons */
-/* ===================== */
+/* ===== 하단 고정 버튼 바 - 모바일 전용 (기본 숨김) ===== */
 
 .bottom-bar{
 position:fixed;
-bottom:env(safe-area-inset-bottom);
+bottom:0;
 left:0;
 width:100%;
-display:flex;
+display:none;
 z-index:999;
 }
 
@@ -148,9 +152,7 @@ background:#FEE500;
 color:#3A1D1D;
 }
 
-/* ===================== */
-/* hover */
-/* ===================== */
+/* ===== Hover 효과 ===== */
 
 .header-btns img:hover{
 transform:translateY(-4px);
@@ -167,9 +169,7 @@ transform:translateY(-3px);
 box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* ===================== */
-/* SEO hidden */
-/* ===================== */
+/* ===== SEO 숨김 ===== */
 
 .seo-hidden{
 position:absolute;
@@ -179,9 +179,7 @@ height:1px;
 overflow:hidden;
 }
 
-/* ===================== */
-/* mobile */
-/* ===================== */
+/* ===== 모바일 (768px 이하) ===== */
 
 @media (max-width:768px){
 
@@ -193,12 +191,46 @@ padding:10px 12px;
 height:34px;
 }
 
+/* 모바일: 햄버거 버튼 표시 */
+.menu-toggle{
+display:block;
+}
+
+/* 모바일: 헤더 버튼 기본 숨김 (햄버거 클릭 시 드롭다운) */
 .header-btns{
-gap:6px;
+display:none;
+position:absolute;
+top:100%;
+left:0;
+right:0;
+flex-direction:row;
+justify-content:center;
+gap:12px;
+padding:14px 16px;
+background:#fff;
+border-bottom:1px solid #eee;
+box-shadow:0 6px 12px rgba(0,0,0,0.1);
+z-index:200;
+}
+
+/* 햄버거 클릭 후 active 클래스 → 표시 */
+.header-btns.active{
+display:flex;
 }
 
 .header-btns img{
-height:34px;
+height:44px;
+width:auto;
+}
+
+/* 모바일: 하단 바 표시 */
+.bottom-bar{
+display:flex;
+}
+
+/* 모바일: 푸터 하단 여백 (하단 바 높이만큼) */
+.site-footer{
+padding-bottom:100px;
 }
 
 }
